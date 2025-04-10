@@ -1,0 +1,167 @@
+[
+    {
+        "id": "a002aa7b203ff276",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d8b7981919705dcf",
+        "type": "random",
+        "z": "a002aa7b203ff276",
+        "name": "",
+        "low": "60",
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "26a8650e242c59a1"
+            ]
+        ]
+    },
+    {
+        "id": "dd90bad597a0d79d",
+        "type": "http in",
+        "z": "a002aa7b203ff276",
+        "name": "",
+        "url": "/fleet/speed",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "d8b7981919705dcf"
+            ]
+        ]
+    },
+    {
+        "id": "01edfcdc2108fa80",
+        "type": "http response",
+        "z": "a002aa7b203ff276",
+        "name": "Test API Response",
+        "statusCode": "200",
+        "headers": {
+            "status": "success"
+        },
+        "x": 1010,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ce92266c77e8b738",
+        "type": "json",
+        "z": "a002aa7b203ff276",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 810,
+        "y": 460,
+        "wires": [
+            [
+                "01edfcdc2108fa80"
+            ]
+        ]
+    },
+    {
+        "id": "26a8650e242c59a1",
+        "type": "function",
+        "z": "a002aa7b203ff276",
+        "name": "function 1",
+        "func": "msg.payload = { value: Number(msg.payload) };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "ce92266c77e8b738"
+            ]
+        ]
+    },
+    {
+        "id": "79d7ba9632f1417e",
+        "type": "function",
+        "z": "a002aa7b203ff276",
+        "name": "function 2",
+        "func": "var randomValue = Math.random();\nif (randomValue > 0.2) {\n    msg.payload = { \"value\": \"closed\" };\n} else {\n    msg.payload = { \"value\": \"open\" };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 460,
+        "wires": [
+            [
+                "ce92266c77e8b738"
+            ]
+        ]
+    },
+    {
+        "id": "5342eee026dc7cdd",
+        "type": "http in",
+        "z": "a002aa7b203ff276",
+        "name": "",
+        "url": "/fleet/door",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 460,
+        "wires": [
+            [
+                "79d7ba9632f1417e"
+            ]
+        ]
+    },
+    {
+        "id": "6343c441267f6694",
+        "type": "function",
+        "z": "a002aa7b203ff276",
+        "name": "function 3",
+        "func": "var randomValue = Math.random();\nif (randomValue > 0.2) {\n    msg.payload = { \"value\": \"on\" };\n} else {\n    msg.payload = { \"value\": \"off\" };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "ce92266c77e8b738"
+            ]
+        ]
+    },
+    {
+        "id": "4d6694a1990797a4",
+        "type": "http in",
+        "z": "a002aa7b203ff276",
+        "name": "",
+        "url": "/fleet/engine",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 520,
+        "wires": [
+            [
+                "6343c441267f6694"
+            ]
+        ]
+    }
+]

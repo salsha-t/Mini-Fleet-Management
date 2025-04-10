@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mini Fleet Management</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="speed">Speed</string>
+    <string name="door">Door Status</string>
+    <string name="engine">Engine Status</string>
+    <string name="speed_value">%d km/h</string>
+    <string name="door_value">%s</string>
+    <string name="engine_value">%s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
