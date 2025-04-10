@@ -22,7 +22,8 @@ Make sure you have Node.js installed, which includes npm.
 #### 2. Verify Installation:
 Open your cmd terminal and run:
 ```shell
-`node --version && npm --version`
+node --version && npm --version
+```
 If installed correctly, the versions of Node.js and npm will be displayed.
 
 
