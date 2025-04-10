@@ -17,14 +17,23 @@ Uses ViewModel and LiveData to handle asynchronous API calls, ensuring a clean s
 ## Installation
 ### Running Node-RED
 (If Node-RED is already installed, proceed to Step 4)
-#### 1. Install Node.js and npm:
-Make sure you have Node.js installed, which includes npm.
-#### 2. Verify Installation:
+1. Make sure you have Node.js installed, which includes npm.
+2. Verify Node.js and npm installation
 Open your cmd terminal and run:
 ```shell
 node --version && npm --version
 ```
-If installed correctly, the versions of Node.js and npm will be displayed.
+3. Install Node-RED
+```shell
+npm install -g --unsafe-perm node-red
+```
+4. Run Node-RED
+```shell
+node-red
+```
+
+### Importing Node-RED Flow
+1. Download the node-red.json file from this repository.
 
 
 
