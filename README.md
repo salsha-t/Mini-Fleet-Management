@@ -18,15 +18,15 @@ Uses ViewModel and LiveData to handle asynchronous API calls, ensuring a clean s
 ### 1. Running Node-RED
 (If Node-RED is already installed, proceed to step 4 to run the Node-RED)
 1. Make sure you have Node.js installed, which includes npm.
-2. Verify Node.js and npm installation
+2. Verify Node.js and npm installation. If installed correctly, the versions will be displayed.
 ```shell
 node --version && npm --version
 ```
-3. Install Node-RED
+3. Install Node-RED.
 ```shell
 npm install -g --unsafe-perm node-red
 ```
-4. Run Node-RED
+4. Run Node-RED.
 ```shell
 node-red
 ```
@@ -37,23 +37,23 @@ node-red
 3. Click the Deploy button to apply the imported flow.
 
 ### 3. Clone the Repository and Import into Android Studio
-1. Clone this repository
+1. Clone this repository.
 ```shell
 git clone https://github.com/salsha-t/Mini-Fleet-Management.git
 ```
-2. Open the project in Android Studio
+2. Open the project in Android Studio.
 
 ### 4. Additional Setup for Google Maps API
-1. Generate SHA1 from Android Studio terminal
+1. Generate SHA1 from Android Studio terminal.
 ```shell
 ./gradlew signingReport
 ```
-2. Open the following URL in your web browser, replacing YOUR_SHA1 with your SHA1 value and ensuring that the package name (com.portfolio.minifleetmanagement) matches your project
+2. Open the following URL in your web browser, replacing YOUR_SHA1 with your SHA1 value and ensuring that the package name (com.portfolio.minifleetmanagement) matches your project.
 ```shell
 [./gradlew signingReport](https://console.developers.google.com/flows/enableapi?apiid=maps-android-backend.googleapis.com&keyType=CLIENT_SIDE_ANDROID&r=YOUR_SHA1%3Bcom.portfolio.minifleetmanagement
 )
 ```
-3. Copy the API key provided and replace the placeholder in your AndroidManifest.xml (simply update YOUR_API_KEY with the actual key.)
+3. Copy the API key provided and replace the placeholder in your AndroidManifest.xml (simply update YOUR_API_KEY with the actual key.).
 ```shell
 <meta-data
     android:name="com.google.android.geo.API_KEY"
