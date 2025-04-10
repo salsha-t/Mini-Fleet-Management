@@ -15,7 +15,7 @@ Alerts are shown (via dialogs and notifications) when dangerous conditions occur
 Uses ViewModel and LiveData to handle asynchronous API calls, ensuring a clean separation between the UI and the business logic.
 
 ## Installation
-### Running Node-RED
+### 1. Running Node-RED
 (If Node-RED is already installed, proceed to Step 4)
 1. Make sure you have Node.js installed, which includes npm.
 2. Verify Node.js and npm installation
@@ -31,23 +31,39 @@ npm install -g --unsafe-perm node-red
 node-red
 ```
 
-### Importing Node-RED Flow
+### 2. Importing Node-RED Flow
 1. Download the node-red.json file from this repository.
 2. Open the Node-RED interface (usually at http://localhost:1880), then use the Import option to import the node-red.json file.
 3. Click the Deploy button to apply the imported flow.
 
-### Clone the Repository and Import into Android Studio
+### 3. Clone the Repository and Import into Android Studio
 1. Clone this repository
 ```shell
 git clone https://github.com/salsha-t/Mini-Fleet-Management.git
 ```
 2. Open the project in Android Studio
 
-### Additional Setup for Google Maps API
+### 4. Additional Setup for Google Maps API
 1. Generate SHA1 from Android Studio terminal
 ```shell
 ./gradlew signingReport
 ```
+2. Open the following URL in your web browser, replacing YOUR_SHA1 with your SHA1 value and ensuring that the package name (com.portfolio.minifleetmanagement) matches your project
+```shell
+[./gradlew signingReport](https://console.developers.google.com/flows/enableapi?apiid=maps-android-backend.googleapis.com&keyType=CLIENT_SIDE_ANDROID&r=YOUR_SHA1%3Bcom.portfolio.minifleetmanagement
+)
+```
+3. Copy the API key provided and replace the placeholder in your AndroidManifest.xml (simply update YOUR_API_KEY with the actual key.)
+```shell
+<meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="YOUR_API_KEY" />
+```
+
+### 5. Running the Application on an Emulator
+The application accesses Node-RED through the localhost IP address (10.0.2.2).
+Make sure to run the application using the Android Studio emulator only.
+
 
 
 
