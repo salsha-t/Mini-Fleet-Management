@@ -16,7 +16,7 @@ Uses ViewModel and LiveData to handle asynchronous API calls, ensuring a clean s
 
 ## Installation
 ### 1. Running Node-RED
-(If Node-RED is already installed, proceed to Step 4)
+(If Node-RED is already installed, proceed to step 4 to run the Node-RED)
 1. Make sure you have Node.js installed, which includes npm.
 2. Verify Node.js and npm installation
 ```shell
