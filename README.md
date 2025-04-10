@@ -50,8 +50,7 @@ git clone https://github.com/salsha-t/Mini-Fleet-Management.git
 ```
 2. Open the following URL in your web browser, replacing YOUR_SHA1 with your SHA1 value and ensuring that the package name (com.portfolio.minifleetmanagement) matches your project.
 ```shell
-[./gradlew signingReport](https://console.developers.google.com/flows/enableapi?apiid=maps-android-backend.googleapis.com&keyType=CLIENT_SIDE_ANDROID&r=YOUR_SHA1%3Bcom.portfolio.minifleetmanagement
-)
+https://console.developers.google.com/flows/enableapi?apiid=maps-android-backend.googleapis.com&keyType=CLIENT_SIDE_ANDROID&r=YOUR_SHA1%3Bcom.portfolio.minifleetmanagement
 ```
 3. Copy the API key provided and replace the placeholder in your AndroidManifest.xml (simply update YOUR_API_KEY with the actual key.).
 ```shell
