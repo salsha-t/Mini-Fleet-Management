@@ -5,13 +5,13 @@ Mini Fleet Management is an Android application built using Kotlin that monitors
 ![Image Alt](https://github.com/salsha-t/Mini-Fleet-Management/blob/0059fd09b8794d8bbf4ff94ea784803cb103ed87/app_screenshot.jpg)
 
 ## Features
-### 1. Simulated Route:
+### 1. Simulated Route
 The application simulates a journey from Monas (Monumen Nasional) to TMII (Taman Mini Indonesia Indah). The route is represented by a series of hardcoded latLng points. New positions are generated every 5 seconds, resulting in a total of 15 waypoints.
-### 2. Periodic API Requests:
+### 2. Periodic API Requests
 Sensor data such as speed, door status, and engine status are fetched via a Node-RED API. The app requests sensor data every 15 seconds, making a total of 5 requests per simulation cycle.
-### 3. Real-time Alerts and Notifications:
+### 3. Real-time Alerts and Notifications
 Alerts are shown (via dialogs and notifications) when dangerous conditions occur—for instance, when the speed exceeds 80 km/h, the door is left open, or the engine is off.
-### 4. MVVM Architecture:
+### 4. MVVM Architecture
 Uses ViewModel and LiveData to handle asynchronous API calls, ensuring a clean separation between the UI and the business logic.
 
 ## Installation
