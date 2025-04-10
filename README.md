@@ -19,7 +19,6 @@ Uses ViewModel and LiveData to handle asynchronous API calls, ensuring a clean s
 (If Node-RED is already installed, proceed to Step 4)
 1. Make sure you have Node.js installed, which includes npm.
 2. Verify Node.js and npm installation
-Open your cmd terminal and run:
 ```shell
 node --version && npm --version
 ```
@@ -34,6 +33,21 @@ node-red
 
 ### Importing Node-RED Flow
 1. Download the node-red.json file from this repository.
+2. Open the Node-RED interface (usually at http://localhost:1880), then use the Import option to import the node-red.json file.
+3. Click the Deploy button to apply the imported flow.
+
+### Clone the Repository and Import into Android Studio
+1. Clone this repository
+```shell
+git clone https://github.com/salsha-t/Mini-Fleet-Management.git
+```
+2. Open the project in Android Studio
+
+### Additional Setup for Google Maps API
+1. Generate SHA1 from Android Studio terminal
+```shell
+./gradlew signingReport
+```
 
 
 
